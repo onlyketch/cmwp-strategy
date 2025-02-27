@@ -1,0 +1,67 @@
+.internship {
+
+    &__wrapper {
+    }
+
+    &__items {
+    }
+
+    &__sticky-text {
+    }
+
+    &__rows {
+    }
+
+    &__row {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        height: 233px;
+        transition: all .3s ease-out;
+
+        &:hover {
+            background: rgba(214, 19, 54, 0.8);
+        }
+
+        &:hover .internship__item-value,
+        &:hover .internship__item-text {
+            color: white;
+        }
+    }
+
+    &__item-value {
+        font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $dark;
+        letter-spacing: normal;
+        user-select: none;
+        transition: all .3s ease-out;
+
+        @media (max-width: 699px) {
+            max-width: 263px;
+        }
+    }
+
+    &__item-text {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $dark;
+        text-transform: none;
+        letter-spacing: normal;
+        max-width: 262px;
+        user-select: none;
+        transition: all .3s ease-out;
+
+        @media (max-width: 699px) {
+            max-width: 303px;
+        }
+    }
+}

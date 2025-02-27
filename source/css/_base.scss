@@ -1,0 +1,157 @@
+$red: #D61336;
+$red-dark: #AB052E;
+$dark: #161719;
+$dark-light: #202B39;
+$light-gray: #F3F3F3;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FFFEFE;
+}
+
+.container {
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 70px;
+
+    @media (max-width: 1023px) {
+        max-width: 100%;
+        padding: 0 32px;
+    }
+
+    @media (max-width: 699px) {
+        padding: 0 16px;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    appearance: none;
+    text-decoration: none;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 0 20px;
+    height: 49px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+
+h2 {
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    color: $dark;
+}
+
+h3 {
+    font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $dark;
+}
+
+h4 {
+    font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $dark;
+}
+
+.section-sign {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &-bull {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $dark;
+        margin-right: 8px;
+    }
+}
+
+.text-red {
+    color: $red;
+}
+
+.invisible {
+    display: none;
+}
+
+.slider {
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 140px;
+        flex-shrink: 0;
+    }
+
+    &__controls-left,
+    &__controls-right {
+        border: none;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background-color: #F4F3F3;
+        border-radius: 12px;
+        background-repeat: no-repeat;
+        background-size: 10px 8px;
+        background-position: center;
+        transition: all .3s ease-out;
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+
+    &__controls-counter {
+        font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $dark;
+        user-select: none;
+    }
+
+    &__controls-left {
+        background-image: url('../images/arrow-black-left.svg');
+
+        &:hover {
+            background-image: url('../images/arrow-white-left.svg');
+        }
+    }
+
+    &__controls-right {
+        background-image: url('../images/arrow-black-right.svg');
+
+        &:hover {
+            background-image: url('../images/arrow-white-right.svg');
+        }
+    }
+}

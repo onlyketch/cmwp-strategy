@@ -1,0 +1,111 @@
+.header {
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    padding: 17px 0 21px 0;
+    z-index: 100;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: block;
+        text-decoration: none;
+        width: 136px;
+        height: 27px;
+
+        &-red {
+            display: none;
+        }
+    }
+
+    &__nav {
+        user-select: none;
+
+        &-item {
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 17px;
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            background-color: transparent;
+            border-radius: 16px;
+            user-select: none;
+            white-space: nowrap; 
+            transition: all .3s ease-out;
+
+            &.active {
+                background-color: $light-gray;
+                color: $dark;
+            }
+
+            &:hover {
+                opacity: 0.6;
+            }
+
+            &.active:hover {
+                opacity: 1;
+            }
+
+            @media (max-width: 1140px) {
+                padding: 12px;
+            }
+
+        }
+
+        @media (max-width: 1023px) {
+            display: none;
+        }
+
+    }
+
+    &__btn {
+        height: 45px;
+        color: $red;
+        transition: all .3s ease-out;
+
+        &:hover {
+            background-color: $red-dark;
+            color: white;
+        }
+    }
+
+    &.fix {
+        position: fixed;
+        top: 0;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(30px);
+    }
+
+    &.fix &__nav-item {
+        color: $dark;
+    }
+
+    &.fix &__btn {
+        background-color: $red;
+        color: white;
+    }
+
+    &.fix &__btn:hover {
+        background-color: $red-dark;
+    }
+
+    &.fix &__logo-white {
+        display: none;
+    }
+
+    &.fix &__logo-red {
+        display: block;
+    }
+
+
+    @media (max-width: 1023px) {
+       top: 0;
+       padding: 22px 0;
+    }
+}
