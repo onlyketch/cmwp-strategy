@@ -22,6 +22,17 @@
 
 @font-face {
 	font-display: swap; 
+    font-family: "Roboto";
+    src: local('Roboto'),
+    	 url('../fonts/Roboto-Bold.woff2') format("woff2"),  
+         url('../fonts/Roboto-Bold.woff') format("woff");
+    
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+	font-display: swap; 
     font-family: "Roboto Condensed";
     src: local('Roboto Condensed'),
     	 url('../fonts/RobotoCondensed-Regular.woff2') format("woff2"),  

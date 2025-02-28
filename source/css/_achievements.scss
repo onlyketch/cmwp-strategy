@@ -117,13 +117,10 @@
     }
 
     &__item-text {
-        font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: 0.96px;
-        text-transform: uppercase;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
         color: $dark;
     }
 

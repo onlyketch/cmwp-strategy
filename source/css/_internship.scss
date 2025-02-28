@@ -22,6 +22,14 @@
         height: 233px;
         transition: all .3s ease-out;
 
+        &-hidden {
+            visibility: hidden;
+
+            @media (max-width: 1023px) {
+                display: none;
+            }
+        }
+
         &:hover {
             background: rgba(214, 19, 54, 0.8);
         }

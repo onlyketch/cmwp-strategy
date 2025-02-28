@@ -91,7 +91,7 @@ gulp.task('watch', function() {
 	gulp.watch('source/css/**/*.scss', gulp.parallel('sass'));
 	gulp.watch('source/js/**/*.js', gulp.parallel('js'));
 	gulp.watch('source/*.html', gulp.parallel('html'));
-	gulp.watch('source/images/*.{jpg,png}', gulp.parallel('cleanImg', 'img'));
+	gulp.watch('source/images/*.{jpg,png,svg}', gulp.parallel('cleanImg', 'img'));
 });
 
 gulp.task('default', gulp.parallel('sass', 'img', 'js', 'html', 'browser-sync', 'watch'));

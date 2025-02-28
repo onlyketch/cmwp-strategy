@@ -12,13 +12,29 @@
 
     &__text {
         font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        line-height: 44px;
         font-weight: 900;
         text-transform: uppercase;
         color: $dark;
-        max-width: 700px;
+        max-width: 670px;
         margin-left: 15.153%;
+
+        &-title {
+            font-size: 64px;
+            line-height: 64px;
+
+            @media (max-width: 1023px) {
+                font-size: 40px;
+                line-height: 40px; 
+            }
+        }
+
+        &-desc {
+            margin-top: 26px;
+            font-size: 20px;
+            line-height: 28px;
+            color: #0D1823;
+            max-width: 550px;
+        }
 
         @media (max-width: 1023px) {
             margin-left: 0;
