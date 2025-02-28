@@ -249,9 +249,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (requestFormHaveErrors == false && protectionField.value == 'sex') {
             let form_data = $(this).serialize();
             $.ajax({
-                type: "GET", //POST 
-                url: "/", // /form/
-                //dataType: "json",
+                type: "POST ", 
+                url: "/form/",
+                dataType: "json",
                 data: form_data,
                 success: function() {
                     requestFormSendAnimation.classList.add('visible');
@@ -263,10 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 1500);
                 }
             });
-        } else {
-            console.log(requestFormHaveErrors);
-            console.log(protectionField.value);
-        }
+        } 
     });
     
     // FORM SUBMIT, VALIDATION END
