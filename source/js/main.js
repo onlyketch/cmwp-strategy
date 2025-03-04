@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    //Кнопка «Навверх»
+    let btnUp = document.querySelector('.btn-up__arrow');
+
+    btnUp.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    });
 
  
     // REVIEWS SLIDER START

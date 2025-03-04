@@ -16,11 +16,23 @@
         &:last-child {
             margin-bottom: 0;
         }
+
+        &.row-lengthy {
+            margin-bottom: 225px;
+
+            @media (max-width: 1023px) {
+                margin-bottom: 16px;
+            }
+        }
     }
 
     &__item {
         height: 233px;
         transition: all .3s ease-out;
+
+        &.item-lengthy {
+            height: 268px;
+        }
 
         &-hidden {
             visibility: hidden;
