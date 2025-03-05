@@ -165,7 +165,7 @@
                             </div>
                             <div class="internship__item item-lengthy">
                                 <div class="internship__item-value">Верификация бизнес-планов</div>
-                                <div class="internship__item-text">Проводим глубокий анализ рынка и предпосылок для бизнес-плана и финансовой модели проекта. Проводим риск-анализ и формируем рекомендации по минимизации рисков и повышению устойчивости бизнес-модели. Согласовываем финансовую модель и закладываем решения для стратегического роста бизнеса</div>
+                                <div class="internship__item-text">Проводим глубокий анализ рынка и&nbsp;предпосылок для бизнес-плана и&nbsp;финансовой модели проекта. Проводим риск-анализ и&nbsp;формируем рекомендации по&nbsp;минимизации рисков и&nbsp;повышению устойчивости бизнес-модели. Согласовываем финансовую модель и&nbsp;закладываем решения для стратегического роста бизнеса</div>
                             </div>
                         </div>
                         <div class="internship__row">
@@ -315,6 +315,7 @@
                                 <label for="fio" class="request__form-label">Фамилия и имя</label>
                                 <input type="text" name="fio" id="fio" class="request__form-input">
                                 <div class="request__form-error-text">Как к вам обращаться?</div>
+                                <input type="hidden" id="protection-field" value="nothing">
                             </div>
                             <div class="request__form-fields-field">
                                 <label for="company-name" class="request__form-label">Название компании</label>
@@ -331,8 +332,7 @@
                             <div class="request__form-fields-field">
                                 <label for="phone" class="request__form-label">Телефон</label>
                                 <input type="text" name="phone" id="phone" class="request__form-input" placeholder="+7">
-                                <div class="request__form-error-text">Заполните номер телефона</div>
-                                <input type="hidden" id="protection-field" value="nothing">
+                                <div class="request__form-error-text">Обязательное поле, если email не указан</div>
                             </div>
                         </div>
                     </div>

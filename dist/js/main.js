@@ -164,20 +164,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         //email
-        if (!emailRegex.test(requestFormInputEmail.value)) {
-            requestFormInputEmail.classList.add('error');
+        // if (!emailRegex.test(requestFormInputEmail.value)) {
+        //     requestFormInputEmail.classList.add('error');
             
-            if (requestFormHaveErrors == false) {
-                requestFormHaveErrors = true;
-            }
-        }
+        //     if (requestFormHaveErrors == false) {
+        //         requestFormHaveErrors = true;
+        //     }
+        // }
       
         //phone
         if (requestFormInputPhone.value == '' || requestFormInputPhone.value.length < 16) {
-            requestFormInputPhone.classList.add('error');
+            if (requestFormInputEmail.value == '') {
+                requestFormInputPhone.classList.add('error');
             
-            if (requestFormHaveErrors == false) {
-                requestFormHaveErrors = true;
+                if (requestFormHaveErrors == false) {
+                    requestFormHaveErrors = true;
+                }
             }
         }
         //CheckBoxes
@@ -223,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
             requestFormInputFio.classList.remove('error');
         }
         formErrorsFixedCheck();
+        if (haveSex == false) haveSex = true;
     });
     
     requestFormInputCompanyName.addEventListener('input', function() {
@@ -233,8 +236,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     requestFormInputEmail.addEventListener('input', function() {
-        if (emailRegex.test(requestFormInputEmail.value) && requestFormInputEmail.classList.contains('error')) {
-            requestFormInputEmail.classList.remove('error');
+        if (emailRegex.test(requestFormInputEmail.value)) {
+            requestFormInputPhone.classList.remove('error');
         }
         formErrorsFixedCheck();
     });
@@ -244,7 +247,6 @@ document.addEventListener('DOMContentLoaded', function() {
             requestFormInputPhone.classList.remove('error');
         }
         formErrorsFixedCheck();
-        if (haveSex == false) haveSex = true;
     });
 
     // SUBMIT
@@ -258,20 +260,23 @@ document.addEventListener('DOMContentLoaded', function() {
         haveSexChecking();
 
         if (requestFormHaveErrors == false && protectionField.value == 'sex') {
+            requestFormSendAnimation.classList.add('visible');
             let form_data = $(this).serialize();
             $.ajax({
-                type: "GET", 
-                url: "/",
-                //dataType: "json",
+                type: "POST", 
+                url: "/form/",
+                dataType: "json",
                 data: form_data,
                 success: function() {
-                    requestFormSendAnimation.classList.add('visible');
                     setTimeout(function() {
                         requestFormSendAnimation.classList.remove('visible');
                         requestBody.classList.add('hidden');
                         let successBlock = document.getElementById('request_success');
                         successBlock.scrollIntoView();
-                    }, 1500);
+                    }, 100);
+                },
+                complete: function() {
+                    requestFormSendAnimation.classList.remove('visible');
                 }
             });
         } 
